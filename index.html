@@ -262,5 +262,21 @@
 
   setInterval(showNextSlide, 4000); // change every 4 seconds
 </script>
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slideshow img');
+
+  function showSlides() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+    });
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+  }
+
+  // Start slideshow
+  slides[0].classList.add('active'); 
+  setInterval(showSlides, 4000); // change every 4s
+</script>
 </body>
 </html>
