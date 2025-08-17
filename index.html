@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Wedding</title>
+  <meta name="description" content="Join us to celebrate our wedding day." />
+
+  <!-- Fonts (optional). Remove if you prefer system fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a class="skip-link" href="#invitation">Skip to Invitation</a>
+
+  <header class="hero" role="banner" aria-label="Wedding hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <h1 class="hero__title">Ikima & Iwuese</h1>
+      <p class="hero__date">Saturday • 20 December 2025 • Makurdi</p>
+      <nav class="hero__actions" aria-label="Primary">
+        <a class="btn btn--light" href="#invitation">Invitation</a>
+        <a class="btn btn--light" href="#pictures">Pictures</a>
+        <a class="btn btn--light" href="#gifts">Gifts</a>
+        <a class="btn btn--light" href="#wishes">Well Wishes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="site">
+    <!-- INVITATION -->
+    <section id="invitation" class="section section--card" aria-labelledby="invitation-title">
+      <div class="container">
+        <h2 id="invitation-title" class="section__title">Invitation</h2>
+        <p class="section__lead">
+          With joyful hearts, we invite you to celebrate our wedding.
+        </p>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3 class="card__title">Event Details</h3>
+            <ul class="list">
+              <li><strong>Date:</strong> Saturday, 20 December 2025</li>
+              <li><strong>Time:</strong> 10:00 AM – 4:00 PM</li>
+              <li><strong>Church:</strong> St. XXX Parish, Makurdi</li>
+              <li><strong>Reception:</strong> Venue XYZ, Makurdi</li>
+              <li><strong>Dress Code:</strong> All shades of brown 🤎</li>
+            </ul>
+            <div class="inline-actions">
+              <a class="btn" href="#rsvp">RSVP Now</a>
+              <button class="btn btn--ghost" id="addToCalendarBtn" type="button">Add to Calendar</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title" id="rsvp">RSVP</h3>
+            <form class="form" id="rsvpForm" novalidate>
+              <label class="form__label">
+                Full Name
+                <input class="form__input" type="text" name="name" required placeholder="e.g., Adaeze Okafor" />
+              </label>
+
+              <label class="form__label">
+                Email (for confirmation)
+                <input class="form__input" type="email" name="email" required placeholder="you@example.com" />
+              </label>
+
+              <label class="form__label">
+                Attendance
+                <select class="form__input" name="attendance" required>
+                  <option value="">Choose…</option>
+                  <option>Joyfully Accept</option>
+                  <option>Regretfully Decline</option>
+                </select>
+              </label>
+
+              <label class="form__label">
+                Number of Guests
+                <input class="form__input" type="number" name="guests" min="1" max="10" value="1" required />
+              </label>
+
+              <label class="form__label">
+                Notes (dietary needs, etc.)
+                <textarea class="form__input" name="notes" rows="3" placeholder="Anything we should know?"></textarea>
+              </label>
+
+              <button class="btn btn--block" type="submit">Submit RSVP</button>
+              <p class="form__help" id="rsvpHelp">We’ll never share your info.</p>
+              <p class="form__success" id="rsvpSuccess" hidden>Thank you! Your RSVP has been saved.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PICTURES -->
+    <section id="pictures" class="section" aria-labelledby="pictures-title">
+      <div class="container">
+        <h2 id="pictures-title" class="section__title">Pictures</h2>
+        <p class="section__lead">A few moments… (replace these placeholders with your photos in <code>/images</code>).</p>
+
+        <div class="gallery" id="gallery" aria-label="Photo gallery">
+          <!-- Replace src with your images -->
+          <figure class="gallery__item">
+            <img src="images/photo1.jpg" alt="Our pre-wedding moment 1" loading="lazy">
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/photo2.jpg" alt="Our pre-wedding moment 2" loading="lazy">
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/photo3.jpg" alt="Our pre-wedding moment 3" loading="lazy">
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/photo4.jpg" alt="Our pre-wedding moment 4" loading="lazy">
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/photo5.jpg" alt="Our pre-wedding moment 5" loading="lazy">
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/photo6.jpg" alt="Our pre-wedding moment 6" loading="lazy">
+          </figure>
+        </div>
+
+        <!-- Lightbox -->
+        <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+          <img id="lightboxImg" alt="">
+          <form method="dialog">
+            <button class="btn btn--light" aria-label="Close">Close</button>
+          </form>
+        </dialog>
+      </div>
+    </section>
+
+    <!-- GIFTS -->
+    <section id="gifts" class="section section--card" aria-labelledby="gifts-title">
+      <div class="container">
+        <h2 id="gifts-title" class="section__title">Gifts</h2>
+        <p class="section__lead">
+          Your presence is the greatest gift! If you wish to bless us further, here are options:
+        </p>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="card__title">Bank Transfer</h3>
+            <p><strong>Account Name:</strong> Ikima Sesugh Valentine</p>
+            <p><strong>Bank:</strong> [Your Bank]</p>
+            <p><strong>Acct No:</strong> 0000000000</p>
+            <button class="btn btn--ghost" data-copy="0000000000" type="button">Copy Account Number</button>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Gift Registry</h3>
+            <p>Add links to Jumia, Amazon, or local stores.</p>
+            <a class="btn" href="#" target="_blank" rel="noopener">View Registry</a>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Envelope Gift</h3>
+            <p>We’ll have a gift box at the reception. Thank you!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WELL WISHES -->
+    <section id="wishes" class="section" aria-labelledby="wishes-title">
+      <div class="container">
+        <h2 id="wishes-title" class="section__title">Well Wishes</h2>
+        <p class="section__lead">Leave a message for the couple. 💌</p>
+
+        <form class="form" id="wishForm" novalidate>
+          <div class="grid grid--2">
+            <label class="form__label">
+              Your Name
+              <input class="form__input" type="text" name="wisher" required placeholder="e.g., Terkimbi" />
+            </label>
+            <label class="form__label">
+              City / Country (optional)
+              <input class="form__input" type="text" name="location" placeholder="e.g., Abuja, Nigeria" />
+            </label>
+          </div>
+          <label class="form__label">
+            Message
+            <textarea class="form__input" name="message" rows="3" maxlength="400" required placeholder="Write your blessings…"></textarea>
+          </label>
+          <button class="btn" type="submit">Send Wish</button>
+        </form>
+
+        <div class="wishes" id="wishesList" aria-live="polite" aria-busy="false">
+          <!-- Wishes render here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site__footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ikima & Iwuese • Made with love in all shades of brown.</p>
+      <a href="#content" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
