@@ -34,7 +34,7 @@
 
   <div class="hero__inner">
     <h1 class="hero__title">Iwuese & Sesugh</h1>
-    <p class="hero__date">Saturday • 04 October 2025 • Makurdi</p>
+    <p class="hero__date">Saturday • 20 December 2025 • Makurdi</p>
     <nav class="hero__actions" aria-label="Primary">
       <a class="btn btn--light" href="#invitation">Invitation</a>
       <a class="btn btn--light" href="#pictures">Pictures</a>
@@ -249,6 +249,18 @@
   }
 
   showSlides();
+</script>
+  <script>
+  const slides = document.querySelectorAll('.slideshow img');
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 4000); // change every 4 seconds
 </script>
 </body>
 </html>
