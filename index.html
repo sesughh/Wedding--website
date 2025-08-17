@@ -17,23 +17,24 @@
   <a class="skip-link" href="#invitation">Skip to Invitation</a>
 
  <header class="hero" role="banner" aria-label="Wedding hero">
-  <!-- Slideshow container -->
-  <div class="slideshow">
-    <!-- First photo -->
-    <img src="https://drive.google.com/uc?export=view&id=1JHGIq8Z0U_2_jk6xVbH_MIeLv2z0stnv" alt="Slideshow 1">
-
-    <!-- Example extra photos (replace IDs with yours) -->
-    <img src="https://drive.google.com/uc?export=view&id=YOUR_SECOND_FILE_ID" alt="Slideshow 2">
-    <img src="https://drive.google.com/uc?export=view&id=YOUR_THIRD_FILE_ID" alt="Slideshow 3">
-  </div>
-
-  <!-- Overlay for dark tint -->
   <div class="hero__overlay"></div>
 
-  <!-- Wedding text on top -->
+  <!-- Slideshow container -->
+  <div class="slideshow">
+    <img src="https://drive.google.com/uc?export=view&id=1tDc66rHI7vY18_PtoLQgMzvNrl9HNEpr" class="active" alt="Slideshow 1">
+    <img src="https://drive.google.com/uc?export=view&id=1aZwHTJ-Bw-gBfVWj9Pz3_FZ-AQYAKopV" alt="Slideshow 2">
+    <img src="https://drive.google.com/uc?export=view&id=14y_w-5PEuZbfQB8f7_qIzW3vhQ_IM2lr" alt="Slideshow 3">
+    <img src="https://drive.google.com/uc?export=view&id=1ijrNtNN4kkdxfBuCSx0lA5o2GurdEx3c" alt="Slideshow 4">
+  </div>
+
+  <!-- Watermark (logo) -->
+  <div class="watermark">
+    <img src="https://drive.google.com/uc?export=view&id=1JHGIq8Z0U_2_jk6xVbH_MIeLv2z0stnv" alt="Wedding Logo">
+  </div>
+
   <div class="hero__inner">
     <h1 class="hero__title">Iwuese & Sesugh</h1>
-    <p class="hero__date">Saturday • 20 December 2025 • Makurdi</p>
+    <p class="hero__date">Saturday • 04 October 2025 • Makurdi</p>
     <nav class="hero__actions" aria-label="Primary">
       <a class="btn btn--light" href="#invitation">Invitation</a>
       <a class="btn btn--light" href="#pictures">Pictures</a>
@@ -231,6 +232,22 @@
   }
 
   // Start slideshow when page loads
+  showSlides();
+</script>
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slideshow img');
+
+  function showSlides() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+    });
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].classList.add('active');
+    setTimeout(showSlides, 5000); // Change every 5s
+  }
+
   showSlides();
 </script>
 </body>
