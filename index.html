@@ -16,12 +16,35 @@
   <!-- Skip to content for accessibility -->
   <a class="skip-link" href="#invitation">Skip to Invitation</a>
 
-  <header class="hero" role="banner" aria-label="Wedding hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__inner">
-      <h1 class="hero__title">Iwuese & Sesugh</h1>
-      <p class="hero__date">Saturday • 20 December 2025 • Makurdi</p>
-      <nav class="hero__actions" aria-label="Primary">
+ <!-- Hero Section with Slideshow Background -->
+<section id="hero">
+  <div class="slideshow-container">
+    <div class="slideshow fade">
+      <img src="images/pic1.jpg" alt="Wedding Photo 1">
+    </div>
+    <div class="slideshow fade">
+      <img src="images/pic2.jpg" alt="Wedding Photo 2">
+    </div>
+    <div class="slideshow fade">
+      <img src="images/pic3.jpg" alt="Wedding Photo 3">
+    </div>
+    <!-- Add more as needed -->
+  </div>
+
+  <div class="hero-content">
+    <!-- Bold Logo at Center -->
+    <img src="images/logo.png" alt="Wedding Logo" class="wedding-logo">
+
+    <h1>Iwuese ❤️ Sesugh</h1>
+    <p>Our Wedding Celebration</p>
+    <nav>
+      <button onclick="document.getElementById('invitation').scrollIntoView()">Invitation</button>
+      <button onclick="document.getElementById('photos').scrollIntoView()">Pictures</button>
+      <button onclick="document.getElementById('gifts').scrollIntoView()">Gifts</button>
+      <button onclick="document.getElementById('wishes').scrollIntoView()">Well Wishes</button>
+    </nav>
+  </div>
+</section>
         <a class="btn btn--light" href="#invitation">Invitation</a>
         <a class="btn btn--light" href="#pictures">Pictures</a>
         <a class="btn btn--light" href="#gifts">Gifts</a>
