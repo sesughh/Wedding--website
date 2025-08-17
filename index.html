@@ -216,5 +216,22 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slideshow img");
+
+  function showSlides() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove("active");
+    });
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].classList.add("active");
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+
+  // Start slideshow when page loads
+  showSlides();
+</script>
 </body>
 </html>
