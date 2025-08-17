@@ -16,43 +16,32 @@
   <!-- Skip to content for accessibility -->
   <a class="skip-link" href="#invitation">Skip to Invitation</a>
 
- <!-- Hero Section with Slideshow Background -->
-<section id="hero">
-  <div class="slideshow-container">
-    <div class="slideshow fade">
-      <img src="images/pic1.jpg" alt="Wedding Photo 1">
-    </div>
-    <div class="slideshow fade">
-      <img src="images/pic2.jpg" alt="Wedding Photo 2">
-    </div>
-    <div class="slideshow fade">
-      <img src="images/pic3.jpg" alt="Wedding Photo 3">
-    </div>
-    <!-- Add more as needed -->
+ <header class="hero" role="banner" aria-label="Wedding hero">
+  <!-- Slideshow container -->
+  <div class="slideshow">
+    <!-- First photo -->
+    <img src="https://drive.google.com/uc?export=view&id=1JHGIq8Z0U_2_jk6xVbH_MIeLv2z0stnv" alt="Slideshow 1">
+
+    <!-- Example extra photos (replace IDs with yours) -->
+    <img src="https://drive.google.com/uc?export=view&id=YOUR_SECOND_FILE_ID" alt="Slideshow 2">
+    <img src="https://drive.google.com/uc?export=view&id=YOUR_THIRD_FILE_ID" alt="Slideshow 3">
   </div>
 
-  <div class="hero-content">
-    <!-- Bold Logo at Center -->
-    <img src="images/logo.png" alt="Wedding Logo" class="wedding-logo">
+  <!-- Overlay for dark tint -->
+  <div class="hero__overlay"></div>
 
-    <h1>Iwuese ❤️ Sesugh</h1>
-    <p>Our Wedding Celebration</p>
-    <nav>
-      <button onclick="document.getElementById('invitation').scrollIntoView()">Invitation</button>
-      <button onclick="document.getElementById('photos').scrollIntoView()">Pictures</button>
-      <button onclick="document.getElementById('gifts').scrollIntoView()">Gifts</button>
-      <button onclick="document.getElementById('wishes').scrollIntoView()">Well Wishes</button>
+  <!-- Wedding text on top -->
+  <div class="hero__inner">
+    <h1 class="hero__title">Iwuese & Sesugh</h1>
+    <p class="hero__date">Saturday • 20 December 2025 • Makurdi</p>
+    <nav class="hero__actions" aria-label="Primary">
+      <a class="btn btn--light" href="#invitation">Invitation</a>
+      <a class="btn btn--light" href="#pictures">Pictures</a>
+      <a class="btn btn--light" href="#gifts">Gifts</a>
+      <a class="btn btn--light" href="#wishes">Well Wishes</a>
     </nav>
   </div>
-</section>
-        <a class="btn btn--light" href="#invitation">Invitation</a>
-        <a class="btn btn--light" href="#pictures">Pictures</a>
-        <a class="btn btn--light" href="#gifts">Gifts</a>
-        <a class="btn btn--light" href="#wishes">Well Wishes</a>
-      </nav>
-    </div>
-  </header>
-
+</header>
   <main id="content" class="site">
     <!-- INVITATION -->
     <section id="invitation" class="section section--card" aria-labelledby="invitation-title">
